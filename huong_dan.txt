@@ -1,0 +1,145 @@
+Tool được phát triển bởi nhóm tele Airdrop Hunter Siêu Tốc (https://t.me/airdrophuntersieutoc)
+#  AUTO FARM FOR NotPixel 🚀
+
+# 🔥🔥 Use PYTHON 3.10 🔥🔥
+
+
+## Features  
+| Feature                               | Supported |
+|---------------------------------------|:---------:|
+| Multithreading                        |     ✔️     |
+| Proxy binding to session              |     ✔️     |
+| User-Agent binding to session         |     ✔️     |
+| Support for tdata / pyrogram .session |     ✔️     |
+| Registration in bot                   |     ✔️     |
+| Auto-paint                            |     ✔️     |
+| Auto-tasks                            |     ✔️     |
+| Auto-claim mining rewards             |     ✔️     |
+| Auto-upgrade boosters                 |     ✔️     |
+| Night sleep mode                      |     ✔️     |
+| Analytics game events                 |     ✔️     |
+
+
+Cài đặt[VN]	                         Miêu tả
+
+API_ID / API_HASH	                  Dữ liệu nền tảng để chạy phiên Telegram (theo mặc định - android)
+
+SLEEP_TIME	                        Thời gian ngủ giữa các chu kỳ (ms) (theo mặc định - [3000, 8000])
+START_DELAY	                        CHờ trước khi bắt đầu (theo mặc định - [5, 60])
+AUTO_PAINT	                        Tự động tap (theo mặc định - True)
+AUTO_UPGRADE	                      Tự động nâng cấp (theo mặc định - True)
+AUTO_MINING	                        Phần thưởng đào tự động nhận (theo mặc định - True)
+AUTO_TASK	                          Tác vụ tự động (theo mặc định - True)
+AUTO_UPGRADE_PAINT	                Phần thưởng sơn tự động nâng cấp (theo mặc định - True)
+MAX_PAINT_LEVEL	                    Mức tối đa cho tăng cường sơn (theo mặc định - 5)
+AUTO_UPGRADE_CHARGE	                Tự động nâng cấp tốc độ nạp tiền (theo mặc định - True)
+MAX_CHARGE_LEVEL	                  Mức tối đa cho bộ tăng cường sạc lại (theo mặc định - 5)
+AUTO_UPGRADE_ENERGY	                Tự động nâng cấp giới hạn năng lượng (theo mặc định - True)
+MAX_ENERGY_LEVEL	                  Mức tối đa để tăng cường năng lượng (theo mặc định - 2)
+USE_RANDOM_COLOR	                  Sử dụng màu ngẫu nhiên từ trò chơi (theo mặc định - True)
+OWN_COLOR	                          Màu riêng nếu USE_RANDOM_COLOR là False (theo mặc định - #FFFFFF)
+NIGHT_SLEEP	                        Ngủ thêm vào ban đêm (theo mặc định - True)
+NIGHT_SLEEP_START_TIME	            Thời gian (giờ) khi chế độ Ban đêm bắt đầu (theo mặc định - [0, 2])
+NIGHT_SLEEP_END_TIME	              Thời gian (giờ) khi chế độ Ban đêm kết thúc (theo mặc định - [5, 7])
+REF_ID	                            Liên kết tham khảo để đăng ký
+
+## [Settings][EN]
+| Settings                   |                                 Description                                 |
+|----------------------------|:---------------------------------------------------------------------------:|
+| **API_ID / API_HASH**      | Platform data from which to run the Telegram session (by default - android) |
+| **SLEEP_TIME**             |            Sleep time between cycles (by default - [3000, 8000])            |
+| **START_DELAY**            |           Delay between sessions at start (by default - [5, 60])            |
+| **AUTO_PAINT**             |                      Auto painting (by default - True)                      |
+| **AUTO_UPGRADE**           |                  Auto upgrade boosters (by default - True)                  |
+| **AUTO_MINING**            |                Auto claim mining reward (by default - True)                 |
+| **AUTO_TASK**              |                       Auto tasks (by default - True)                        |
+| **AUTO_UPGRADE_PAINT**     |                Auto upgrade paint reward (by default - True)                |
+| **MAX_PAINT_LEVEL**        |                Max level for paint booster (by default - 5)                 |
+| **AUTO_UPGRADE_CHARGE**    |               Auto upgrade recharge speed (by default - True)               |
+| **MAX_CHARGE_LEVEL**       |               Max level for recharge booster (by default - 5)               |
+| **AUTO_UPGRADE_ENERGY**    |                Auto upgrade energy limit (by default - True)                |
+| **MAX_ENERGY_LEVEL**       |                Max level for energy booster (by default - 2)                |
+| **USE_RANDOM_COLOR**       |               Use random color from game (by default - True)                |
+| **OWN_COLOR**              |        Own color if USE_RANDOM_COLOR is False (by default - #FFFFFF)        |
+| **NIGHT_SLEEP**            |                  Extra sleep at night (by default - True)                   |
+| **NIGHT_SLEEP_START_TIME** |          Time (hour) when Night mode starts (by default - [0, 2])           |
+| **NIGHT_SLEEP_END_TIME**   |           Time (hour) when Night mode ends (by default - [5, 7])            |
+| **REF_ID**                 |                          Ref link for registration                          |
+
+
+## Quick Start 📚
+
+To fast install libraries and run bot - open `run.bat` on **Windows** or `run.sh` on **Linux**
+
+## Prerequisites
+Before you begin, make sure you have the following installed:
+- [**Python**](https://www.python.org/downloads/release/python-3100/) **version 3.10**
+
+## Lấy API_ID và API_HASH
+1. Go to [**my.telegram.org**](https://my.telegram.org/auth) and log in using your phone number.
+2. Select `API development tools` and fill out the form to register a new application.
+3. Record the `API_ID` and `API_HASH` provided after registering your application in the `.env` file.
+
+## Cách cài đặt
+
+#Dành cho Windows, chạy lệnh để cài các package tự động: run.bat
+
+#Dành cho Linux: run.sh
+
+
+# Dành cho Linux, chạy lệnh để cài các package thủ công:
+
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+cp .env-example .env
+nano .env  # Here you must specify your API_ID and API_HASH, the rest is taken by default
+python3 main.py
+
+
+You can also use arguments for quick start, for example:
+```shell
+~/NotPixelBot >>> python3 main.py --action (1/2)
+# Or
+~/NotPixelBot >>> python3 main.py -a (1/2)
+
+# 1 - Run clicker
+# 2 - Creates a session
+```
+
+# Dành cho Windows, chạy lệnh để cài các package thủ công:
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+copy .env-example .env
+python main.py
+
+
+You can also use arguments for quick start, for example:
+```shell
+~/NotPixelBot >>> python main.py --action (1/2)
+# Or
+~/NotPixelBot >>> python main.py -a (1/2)
+
+# 1 - Run clicker
+# 2 - Creates a session
+```
+
+### Usages
+When you first launch the bot, create a session for it using the `Creates a session` command. It will create a `sessions` folder in which all accounts will be stored, as well as a file `accounts.json` with configurations.
+If you already have sessions, simply place them in a folder `sessions` and run the clicker. During the startup process you will be able to configure the use of a proxy for each session.
+User-Agent is created automatically for each account.
+
+Here is an example of what `accounts.json` should look like:
+```shell
+[
+  {
+    "session_name": "name_example",
+    "user_agent": "Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.6422.165 Mobile Safari/537.36",
+    "proxy": "type://user:pass:ip:port"  # "proxy": "" - if you dont use proxy
+  }
+]
+```
+
+
+
